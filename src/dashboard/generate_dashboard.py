@@ -143,7 +143,8 @@ def page(entries):
     li = "".join(f"<li>{esc(t)}</li>" for t in LIMITS)
     return (
         f"<!DOCTYPE html><html><head><meta charset='utf-8'><title>Bias Audit Dashboard</title><style>{CSS}</style></head><body>"
-        "<h1>Bias Audit Dashboard</h1>"
+        #"<h1>Bias Audit Dashboard</h1>"
+        "<a href='/'>&larr; Home</a><h1>Bias Audit Dashboard</h1>"
         "<p class='sub'>Each applicant is decided once as-is, then again with exactly one attribute changed (a counterfactual). "
         "The <b>flip rate</b> is the share of applicants whose decision changed. Dots are flip rates; lines are 95% confidence intervals. "
         f"Models are compared on the same first {SAMPLE} profiles.</p>"
